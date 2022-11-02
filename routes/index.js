@@ -14,6 +14,7 @@ const TransactionController = require('../PaymentController/TransactionsControll
 const { default: Pagseg } = require('../PagseguroProvider/Pagseg');
 const s = require('../PagseguroProvider/Pagseg');
 const providerController = require('../PagseguroProvider/Pagseg');
+const codeController = require('../PagseguroProvider/CodeController');
 
 
 
@@ -52,6 +53,13 @@ routes.delete('/carts/:_id', CartController.delete)
 
 
 routes.get('/transaction/:_id', providerController.get)
+
+
+
+
+
+//routes.get('/transaction', codeController.getToken)
+
 
 
 

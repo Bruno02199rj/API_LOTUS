@@ -1,5 +1,5 @@
 const mongoose = require('mongoose')
-const { number, ref } = require('yup')
+
 
 const Schema = new mongoose.Schema({
 
