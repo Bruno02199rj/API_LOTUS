@@ -1,7 +1,11 @@
 const mongoose = require('mongoose')
 
 const Schema = new mongoose.Schema({
-    productName:{
+    productName: {
+        type: String,
+        required: true
+    },
+    productCategory: {
         type: String,
         required: true
     },
@@ -18,9 +22,43 @@ const Schema = new mongoose.Schema({
     },
     productImage: {
         type: String,
-        
+
     },
-    username:{
+    productColor: [
+        {
+            color:{
+                type:String
+            },
+            color:{
+                type:String
+            },
+            color:{
+                type:String
+            },
+            color:{
+                type:String
+            }
+        }
+    ],
+    productSize: [
+        {
+            size: {
+                type: String,
+
+            },
+            size: {
+                type: String,
+            },
+            size: {
+                type: String,
+            },
+            size: {
+                type: String,
+            }
+        },
+    ],
+   
+    username: {
         type: mongoose.Schema.Types.ObjectId,
         ref: 'User',
         required: true
