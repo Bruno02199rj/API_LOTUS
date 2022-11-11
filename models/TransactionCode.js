@@ -5,7 +5,11 @@ const Schema = new mongoose.Schema({
 
 
     eltransactionCode:{
-        type: String
+        type: String,
+       
+    },
+    emissão:{
+       type: String, default: Date
     }
 
    

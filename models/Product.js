@@ -1,4 +1,5 @@
 const mongoose = require('mongoose')
+const { array } = require('yup')
 
 const Schema = new mongoose.Schema({
     productName: {
@@ -21,39 +22,21 @@ const Schema = new mongoose.Schema({
         required: true
     },
     productImage: {
-        type: String,
+        type: Array,
 
     },
     productColor: [
         {
             color:{
-                type:String
-            },
-            color:{
-                type:String
-            },
-            color:{
-                type:String
-            },
-            color:{
-                type:String
+                type:Array,
             }
         }
     ],
     productSize: [
         {
             size: {
-                type: String,
+                type: Array,
 
-            },
-            size: {
-                type: String,
-            },
-            size: {
-                type: String,
-            },
-            size: {
-                type: String,
             }
         },
     ],

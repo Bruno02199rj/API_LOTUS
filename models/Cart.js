@@ -20,12 +20,15 @@ const Schema = new mongoose.Schema({
     transactionCode:{
         type: String
     },
+    productImage:{
+        type:Array
+    },
 
     CartCode: {
         type: String
 
-    }
-
+    },
+  
     //criar cart code aqui e total
 
 })
